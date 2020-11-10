@@ -7,6 +7,11 @@ const routes: Routes = [
 		loadChildren: () =>
 			import('./wobble/wobble.module').then((m) => m.WobbleModule),
 	},
+	{
+		path: 'bounce',
+		loadChildren: () =>
+			import('./bounce/bounce.module').then((m) => m.BounceModule),
+	},
 ];
 
 @NgModule({
