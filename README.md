@@ -1,5 +1,7 @@
 # NgAnimationWobble
 
+- [angular 8 animations](https://stackblitz.com/edit/angular-8-animations?file=package.json)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
 
 ## Development server
