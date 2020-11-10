@@ -12,6 +12,13 @@ const routes: Routes = [
 		loadChildren: () =>
 			import('./bounce/bounce.module').then((m) => m.BounceModule),
 	},
+	{
+		path: 'css-wobble',
+		loadChildren: () =>
+			import('./css-wobble/css-wobble.module').then(
+				(m) => m.CssWobbleModule,
+			),
+	},
 ];
 
 @NgModule({
