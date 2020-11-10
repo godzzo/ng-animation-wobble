@@ -1,1 +1,3 @@
-<div class="shake1">wobble works!</div>
+<button (click)="changeDivSize = 'initial'">Go Tiny initial</button>
+<button (click)="changeDivSize = 'final'">Grow! final</button>
+<div class="shake1" [@changeDivSize]="changeDivSize">wobble works!</div>

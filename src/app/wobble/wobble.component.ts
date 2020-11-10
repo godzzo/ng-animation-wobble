@@ -35,6 +35,8 @@ const triggerChangeDivSize = trigger('changeDivSize', [
 	animations: [triggerChangeDivSize],
 })
 export class WobbleComponent implements OnInit {
+	changeDivSize = 'initial';
+
 	constructor() {}
 
 	ngOnInit(): void {}
