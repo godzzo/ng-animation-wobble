@@ -4,6 +4,7 @@ import { Component, OnInit, Input } from '@angular/core';
 	selector: 'app-star-circle',
 	templateUrl: './star-circle.component.html',
 	styleUrls: ['./star-circle.component.scss'],
+	animations: [],
 })
 export class StarCircleComponent implements OnInit {
 	@Input() data: any;
