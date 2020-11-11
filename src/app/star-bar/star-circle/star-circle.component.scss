@@ -1,4 +1,19 @@
 :host {
-	width: 2rem;
 	flex-grow: 1;
+	text-align: center;
+	margin: 0.3rem;
+}
+
+.content {
+	border-radius: 50%;
+	border: 1px solid green;
+	width: 45px;
+	height: 45px;
+	display: inline-block;
+	display: flex;
+}
+
+.icon {
+	margin: auto;
+	font-size: 25px;
 }
