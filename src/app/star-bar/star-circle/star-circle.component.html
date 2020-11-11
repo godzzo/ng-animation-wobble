@@ -1,1 +1,8 @@
-<div class="content"><span class="icon">😻</span></div>
+<div
+	class="content"
+	[@flipping]="flipping ? 'true' : 'false'"
+	[@shaking]="shaking ? 'true' : 'false'"
+	(click)="flipping = !flipping"
+>
+	<span class="icon">😻</span>
+</div>

@@ -11,6 +11,7 @@ import {
 	animation,
 	useAnimation,
 	stagger,
+	keyframes,
 } from '@angular/animations';
 
 const customAnimation = animation(
@@ -36,6 +37,60 @@ const customAnimation = animation(
 		},
 	},
 );
+
+export const flippingAnimation = trigger('flipping', [
+	state('true', style({ backgroundColor: 'grey' })),
+	state('false', style({ backgroundColor: 'red' })),
+	transition(
+		'true => false, false => true',
+		animate(
+			'800ms linear',
+			keyframes([
+				style({ transform: 'rotate3d(0)', offset: 0 }),
+				style({ transform: 'rotate3d(0, 1, 0, 720deg)', offset: 0 }),
+				style({ transform: 'rotate3d(0)', offset: 1 }),
+			]),
+		),
+	),
+]);
+
+export const shakingAnimation = trigger('shaking', [
+	state('true', style({ backgroundColor: 'grey' })),
+	state('false', style({ backgroundColor: 'red' })),
+	transition(
+		'true => false, false => true',
+		animate(
+			'800ms linear',
+			keyframes([
+				style({ transform: 'none', offset: 0 }),
+				style({
+					transform:
+						'translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg)',
+					offset: 0.15,
+				}),
+				style({
+					transform: 'translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg)',
+					offset: 0.3,
+				}),
+				style({
+					transform:
+						'translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg)',
+					offset: 0.45,
+				}),
+				style({
+					transform: 'translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg)',
+					offset: 0.6,
+				}),
+				style({
+					transform:
+						'translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg)',
+					offset: 0.75,
+				}),
+				style({ transform: 'none', offset: 1 }),
+			]),
+		),
+	),
+]);
 
 export const fuseAnimations = [
 	trigger('animate', [
