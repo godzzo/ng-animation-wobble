@@ -82,7 +82,23 @@ const speeding = trigger('animateArc', [
 	),
 ]);
 
-const flipping = trigger('animateArc', [
+const flipping = trigger('flipping', [
+	state('true', style({ backgroundColor: 'grey' })),
+	state('false', style({ backgroundColor: 'red' })),
+	transition(
+		'true => false, false => true',
+		animate(
+			'800ms linear',
+			keyframes([
+				style({ transform: 'rotate3d(0)', offset: 0 }),
+				style({ transform: 'rotate3d(0, 1, 0, 720deg)', offset: 0 }),
+				style({ transform: 'rotate3d(0)', offset: 1 }),
+			]),
+		),
+	),
+]);
+
+const shaking = trigger('shaking', [
 	state('true', style({ backgroundColor: 'grey' })),
 	state('false', style({ backgroundColor: 'red' })),
 	transition(
@@ -125,10 +141,12 @@ const flipping = trigger('animateArc', [
 	templateUrl: './bounce.component.html',
 	styleUrls: ['./bounce.component.scss'],
 
-	animations: [flipping],
+	animations: [animateArc, flipping, shaking],
 })
 export class BounceComponent {
-	arc: string = 'false';
+	arc = 'false';
+	flipping = false;
+	shaking = false;
 
 	toggleBounce() {
 		this.arc = this.arc === 'false' ? 'true' : 'false';
