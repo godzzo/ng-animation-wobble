@@ -1,19 +1,19 @@
 :host {
-	flex-grow: 1;
+	flex-grow: 1; /* Keep equal distance each other cricle component */
 	text-align: center;
 	margin: 0.3rem;
 }
 
 .content {
-	border-radius: 50%;
-	border: 1px solid green;
+	border-radius: 50%; /* Make Circle */
+	border: 1px solid green; /* Draw Circle */
 	width: 45px;
 	height: 45px;
 	display: inline-block;
-	display: flex;
+	display: flex; /* Centering the Smiley */
 }
 
 .icon {
-	margin: auto;
+	margin: auto; /* Centering the Smiley*/
 	font-size: 25px;
 }
