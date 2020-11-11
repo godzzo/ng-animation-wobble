@@ -19,6 +19,13 @@ const routes: Routes = [
 				(m) => m.CssWobbleModule,
 			),
 	},
+	{
+		path: 'wanky',
+		loadChildren: () =>
+			import('./wanky-card/wanky-card.module').then(
+				(m) => m.WankyCardModule,
+			),
+	},
 ];
 
 @NgModule({

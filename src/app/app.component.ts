@@ -11,5 +11,6 @@ export class AppComponent {
 		{ name: 'Wobble', link: '/wobble' },
 		{ name: 'Bounce', link: '/bounce' },
 		{ name: 'CSS Wobble', link: '/css-wobble' },
+		{ name: 'Wanky Card', link: '/wanky' },
 	];
 }
