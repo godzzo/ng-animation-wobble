@@ -9,8 +9,9 @@
 <button (click)="flipping = !flipping">Flipping!</button>
 <button (click)="shaking = !shaking">Shaking!</button>
 
-<div [@animateArc]="arc"
-	[@flipping]="flipping? 'true': 'false'"
-	[@shaking]="shaking? 'true': 'false'"
+<div
+	[@animateArc]="arc"
+	[@flipping]="flipping ? 'true' : 'false'"
+	[@shaking]="shaking ? 'true' : 'false'"
 	class="ball"
 ></div>
