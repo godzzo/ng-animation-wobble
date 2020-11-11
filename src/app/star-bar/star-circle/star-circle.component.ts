@@ -1,5 +1,11 @@
 import { shakingAnimation, flippingAnimation } from './../../util/animations';
-import { Component, OnInit, Input } from '@angular/core';
+import {
+	Component,
+	OnInit,
+	Input,
+	OnChanges,
+	SimpleChanges,
+} from '@angular/core';
 
 @Component({
 	selector: 'app-star-circle',
@@ -7,8 +13,8 @@ import { Component, OnInit, Input } from '@angular/core';
 	styleUrls: ['./star-circle.component.scss'],
 	animations: [shakingAnimation, flippingAnimation],
 })
-export class StarCircleComponent implements OnInit {
-	@Input() data: any;
+export class StarCircleComponent implements OnInit, OnChanges {
+	@Input() value: number;
 
 	flipping = false;
 	shaking = false;
@@ -16,4 +22,16 @@ export class StarCircleComponent implements OnInit {
 	constructor() {}
 
 	ngOnInit(): void {}
+
+	ngOnChanges(changes: SimpleChanges): void {
+		const valueChange = changes.value;
+
+		if (!valueChange.firstChange) {
+			if (valueChange.currentValue > 0) {
+				this.flipping = true;
+			} else {
+				this.shaking = true;
+			}
+		}
+	}
 }

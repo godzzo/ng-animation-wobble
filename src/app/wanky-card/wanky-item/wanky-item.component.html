@@ -1,7 +1,18 @@
 <div class="card">
 	<img src="/assets/cards/card1.jpg" />
 
-	<app-star-bar [stars]="5"></app-star-bar>
+	<app-star-bar [stars]="questions"></app-star-bar>
 
-	<div class="bottom-area"></div>
+	<div class="bottom-area">
+		<ng-container *ngFor="let question of questions; let index = index">
+			<div>
+				{{ index + 1 }}.
+				<select [(ngModel)]="question.value">
+					<option [value]="null">Empty</option>
+					<option [value]="1">Succeeded</option>
+					<option [value]="0">Failed</option>
+				</select>
+			</div>
+		</ng-container>
+	</div>
 </div>

@@ -4,5 +4,9 @@
 	[@shaking]="shaking ? 'true' : 'false'"
 	(click)="flipping = !flipping"
 >
-	<span class="icon">😻</span>
+	<span class="icon">
+		<ng-container *ngIf="value == null">❔</ng-container>
+		<ng-container *ngIf="value == 0">💩</ng-container>
+		<ng-container *ngIf="value == 1">😻</ng-container>
+	</span>
 </div>

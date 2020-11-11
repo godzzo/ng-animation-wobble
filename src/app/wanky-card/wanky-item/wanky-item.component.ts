@@ -6,6 +6,14 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['./wanky-item.component.scss'],
 })
 export class WankyItemComponent implements OnInit {
+	questions = [
+		{ value: null },
+		{ value: null },
+		{ value: null },
+		{ value: null },
+		{ value: null },
+	];
+
 	constructor() {}
 
 	ngOnInit(): void {}

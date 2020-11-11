@@ -1,1 +1,4 @@
-<app-star-circle *ngFor="let star of _stars" [data]="star"></app-star-circle>
+<app-star-circle
+	*ngFor="let star of stars"
+	[value]="star.value"
+></app-star-circle>

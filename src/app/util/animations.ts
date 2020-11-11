@@ -39,8 +39,8 @@ const customAnimation = animation(
 );
 
 export const flippingAnimation = trigger('flipping', [
-	state('true', style({ backgroundColor: 'grey' })),
-	state('false', style({ backgroundColor: 'red' })),
+	state('true', style({ backgroundColor: 'green' })),
+	state('false', style({ backgroundColor: 'white' })),
 	transition(
 		'true => false, false => true',
 		animate(
@@ -55,8 +55,8 @@ export const flippingAnimation = trigger('flipping', [
 ]);
 
 export const shakingAnimation = trigger('shaking', [
-	state('true', style({ backgroundColor: 'grey' })),
-	state('false', style({ backgroundColor: 'red' })),
+	state('true', style({ backgroundColor: 'red' })),
+	state('false', style({ backgroundColor: 'white' })),
 	transition(
 		'true => false, false => true',
 		animate(

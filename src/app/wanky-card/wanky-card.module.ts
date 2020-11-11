@@ -5,9 +5,10 @@ import { CommonModule } from '@angular/common';
 
 import { WankyCardRoutingModule } from './wanky-card-routing.module';
 import { WankyCardComponent } from './wanky-card.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
 	declarations: [WankyCardComponent, WankyItemComponent],
-	imports: [CommonModule, WankyCardRoutingModule, StarBarModule],
+	imports: [CommonModule, WankyCardRoutingModule, StarBarModule, FormsModule],
 })
 export class WankyCardModule {}
